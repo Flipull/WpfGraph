@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,6 +65,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Formula\FormulaPart.cs" />
+    <Compile Include="Formula\FormulaPart_FncHks.cs" />
+    <Compile Include="Formula\FormulaPart_FncSin.cs" />
+    <Compile Include="Formula\FormulaPart_Function.cs" />
+    <Compile Include="Formula\FormulaPart_OpAdd.cs" />
+    <Compile Include="Formula\FormulaPart_OpDiv.cs" />
+    <Compile Include="Formula\FormulaPart_Operator.cs" />
+    <Compile Include="Formula\FormulaPart_OpExp.cs" />
+    <Compile Include="Formula\FormulaPart_OpMul.cs" />
+    <Compile Include="Formula\FormulaPart_OpSub.cs" />
+    <Compile Include="Formula\FormulaPart_Value.cs" />
+    <Compile Include="Formula\FormulaPart_Variable.cs" />
+    <Compile Include="Vector2.cs" />
+    <Compile Include="GraphDrawer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

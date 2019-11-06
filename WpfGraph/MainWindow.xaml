@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfGraph"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" SizeChanged="Window_SizeChanged" Loaded="Window_Loaded" Initialized="Window_Initialized">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60px" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="1" x:Name="DrawingCanvas" MouseDown="Canvas_MouseDown" MouseMove="Canvas_MouseMove" MouseUp="Canvas_MouseUp" MouseWheel="Canvas_MouseWheel" ClipToBounds="True" Background="#00000000" MouseLeftButtonDown="DrawingCanvas_MouseLeftButtonDown" MouseRightButtonDown="DrawingCanvas_MouseRightButtonDown" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" Initialized="DrawingCanvas_Initialized">
+        </Canvas>
+        <Button Grid.Row="0" Content="New" HorizontalAlignment="Left" Margin="563,5,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox Grid.Row="0" HorizontalAlignment="Left" Height="28" Margin="239,1,0,0" TextWrapping="Wrap" Text="sin(x)" VerticalAlignment="Top" Width="300" FontSize="18" TextChanged="TextBox_TextChanged"/>
+        <TextBox Grid.Row="0" HorizontalAlignment="Left" Height="28" Margin="239,31,0,0" TextWrapping="Wrap" Text="sin(x)" VerticalAlignment="Top" Width="300" FontSize="18" TextChanged="TextBox_TextChanged"/>
     </Grid>
 </Window>
